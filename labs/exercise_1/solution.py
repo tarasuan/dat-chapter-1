@@ -6,4 +6,11 @@ def is_divisible_by33():
       results.append(i)
   print results
 
+  try:
+    for i in results:
+      i%33 == 0
+    print "All checked out."
+  except ValueError:
+    print "Oops, %s is not divisible by 33. Must be a bug!" % i
+
 is_divisible_by33()
