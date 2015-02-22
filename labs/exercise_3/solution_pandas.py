@@ -1,13 +1,10 @@
 import pandas as pd
-movies_df = pd.read_csv('/Users/tarasuan/Desktop/rock.csv')
-
-# print movies_df.dtypes
-# print movies_df.head()
+movies = pd.read_csv('/Users/tarasuan/Desktop/rock.csv')
 
 # Important: have not dealt with dupes
+movies_1981 = movies[movies["Release Year"] == "1981"]
 
-movies_by_year_df = movies_df[movies_df.ReleaseYear == "1981"]
-print movies_by_year_df.count 
+print movies_1981.count 
 
-movies_by_playcount_df = movies_df.sort('PlayCount', ascending=False)
-print movies_by_playcount_df.head(20)
+movies_by_playcount = movies.sort('PlayCount', ascending=False)
+print movies_by_playcount.head(20)
