@@ -10,4 +10,4 @@ movies_by_year_df = movies_df[movies_df.ReleaseYear == "1981"]
 print movies_by_year_df.count 
 
 movies_by_playcount_df = movies_df.sort('PlayCount', ascending=False)
-print movies_by_playcount_df.head(10)
+print movies_by_playcount_df.head(20)
